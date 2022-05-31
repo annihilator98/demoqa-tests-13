@@ -35,17 +35,16 @@ public class PracticeFormTests {
         $("[id=currentAddress]").setValue("Minsk address");
 
         $("#dateOfBirthInput").click();
-        $(".react-datepicker__month-select").click();
         $(".react-datepicker__month-select").selectOption("August");
-        $(".react-datepicker__year-select").click();
         $(".react-datepicker__year-select").selectOption("1998");
         $("[aria-label = 'Choose Monday, August 10th, 1998']").click();
 
-        $("#subjectsInput").setValue("Maths").pressEnter();
+        $("#subjectsInput").sendKeys("Maths");
+        $("#subjectsInput").pressEnter();
 
         $("#hobbiesWrapper").$(byText("Reading")).click();
 
-        $("#uploadPicture").uploadFile (new File("src/test/java/fixtures/screenshot.png"));
+        $("#uploadPicture").uploadFile (new File("src/test/resources/screenshot.png"));
 
         $("[id=currentAddress]").setValue("Minsk address");
 
