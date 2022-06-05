@@ -10,7 +10,14 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 
-public class PracticeFormTests extends TestBase{
+import static utils.RandomUtils.getRandomEmail;
+import static utils.RandomUtils.getRandomString;
+
+public class PracticeFormWithRandomTests extends TestBase {
+    String firstName = getRandomString(10);
+    String lastName = getRandomString(10);
+    String email = getRandomEmail();
+
     @Test
     void successfulTest (){
 
@@ -18,9 +25,9 @@ public class PracticeFormTests extends TestBase{
         executeJavaScript("$('footer').remove()");
         executeJavaScript("$('#fixedban').remove()");
 
-        $("[id=firstName]").setValue("hanna");
-        $("[id=lastName]").setValue("LastName");
-        $("[id=userEmail]").setValue("hanna77@mail.com");
+        $("[id=firstName]").setValue(firstName);
+        $("[id=lastName]").setValue(lastName);
+        $("[id=userEmail]").setValue(email );
         $("#genterWrapper").$(byText("Female")).click();
 
         $("[id=userNumber]").setValue("1234567891");

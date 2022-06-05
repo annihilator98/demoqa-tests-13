@@ -10,7 +10,8 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 
-public class PracticeFormTests extends TestBase{
+public class PracticeFormWithTestDataTests extends TestBase{
+
     @Test
     void successfulTest (){
 
