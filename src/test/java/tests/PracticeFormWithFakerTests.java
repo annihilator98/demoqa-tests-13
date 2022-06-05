@@ -1,16 +1,25 @@
 package tests;
 
-import com.codeborne.selenide.Configuration;
-import org.junit.jupiter.api.BeforeAll;
+import com.github.javafaker.Faker;
 import org.junit.jupiter.api.Test;
 
 import java.io.File;
+import java.util.Locale;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 
-public class PracticeFormTests extends TestBase{
+
+public class PracticeFormWithFakerTests extends TestBase{
+
+    Faker faker = new Faker(new Locale("ru"));
+
+    String firstName = faker.address().firstName();
+    String lastName = faker.address().lastName();
+    String email = faker.internet().emailAddress();
+    String currentAddress = faker.witcher().quote();
+
     @Test
     void successfulTest (){
 
@@ -18,13 +27,13 @@ public class PracticeFormTests extends TestBase{
         executeJavaScript("$('footer').remove()");
         executeJavaScript("$('#fixedban').remove()");
 
-        $("[id=firstName]").setValue("hanna");
-        $("[id=lastName]").setValue("LastName");
-        $("[id=userEmail]").setValue("hanna77@mail.com");
+        $("[id=firstName]").setValue(firstName);
+        $("[id=lastName]").setValue(lastName);
+        $("[id=userEmail]").setValue(email);
         $("#genterWrapper").$(byText("Female")).click();
 
         $("[id=userNumber]").setValue("1234567891");
-        $("[id=currentAddress]").setValue("Minsk address");
+        $("[id=currentAddress]").setValue(currentAddress);
 
         $("#dateOfBirthInput").click();
         $(".react-datepicker__month-select").selectOption("August");
@@ -46,8 +55,8 @@ public class PracticeFormTests extends TestBase{
         $("[id=submit]").click();
 
         $(".table-responsive").shouldHave(
-                text("hanna"),
-                text("hanna77@mail.com"),
+                text(firstName),
+                text(lastName),
                 text("Female"),
                 text("1234567891"),
                 text("10 August,1998"),
