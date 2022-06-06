@@ -53,9 +53,9 @@ public class PracticeFormWithRandomTests extends TestBase {
         $("[id=submit]").click();
 
         $(".table-responsive").shouldHave(
-                text("hanna"),
-                text("hanna77@mail.com"),
-                text("Female"),
+                text(firstName),
+                text(lastName),
+                text(email),
                 text("1234567891"),
                 text("10 August,1998"),
                 text("Maths"),
