@@ -14,10 +14,11 @@ import static com.codeborne.selenide.Selenide.*;
 public class PracticeFormWithFakerTests extends TestBase{
 
     Faker faker = new Faker(new Locale("ru"));
+    Faker fakerEn = new Faker(new Locale("en"));
 
     String firstName = faker.address().firstName();
     String lastName = faker.address().lastName();
-    String email = faker.internet().emailAddress();
+    String email = fakerEn.internet().emailAddress();
     String currentAddress = faker.witcher().quote();
 
     @Test
