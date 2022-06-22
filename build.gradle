@@ -33,7 +33,6 @@ dependencies {
             "org.junit.jupiter:junit-jupiter:$junitVersion",
             "org.slf4j:slf4j-simple:$slf4jVersion",
             "com.github.javafaker:javafaker:1.0.2",
-
     )
 }
 
