@@ -68,9 +68,16 @@ task hello_test(type: Test){
     }
 }
 
-task owner(type: Test){
+task owner_test(type: Test){
 
     useJUnitPlatform{
         includeTags "owner"
+    }
+}
+
+task home_test(type: Test){
+
+    useJUnitPlatform{
+        includeTags "home"
     }
 }
