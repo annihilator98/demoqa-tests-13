@@ -35,6 +35,9 @@ public class TestBase {
 
         String remoteDriverUrl = System.getProperty("remoteDriverUrl");
         Configuration.remote = String.format("https://%s:%s@%s", config.login(), config.password(), remoteDriverUrl);
+        System.out.println(remoteDriverUrl);
+        System.out.println(config.login());
+        System.out.println(config.password());
         //Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wb/hub";
     }
 
