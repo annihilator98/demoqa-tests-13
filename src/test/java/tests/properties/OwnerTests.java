@@ -24,26 +24,4 @@ public class OwnerTests {
         String message = format("I logged in as %s with password %s", login, password);
         System.out.println("Message: " + message);
     }
-
-    @Test
-    @Tag("home")
-    void propTest(){
-
-        String browser = System.getProperty("browser", "chrome");
-        String version = System.getProperty("version", "101");
-        String browserSize = System.getProperty("browserSize", "1920x1080");
-
-        System.out.println(browser);
-        System.out.println(version);
-        System.out.println(browserSize);
-
-        String login = config.login();
-        String password = config.password();
-
-        System.out.println("Login: " + login);
-        System.out.println("Password: " + password);
-
-        String message = format("I logged in as %s with password %s", login, password);
-        System.out.println("Message: " + message);
-    }
 }
