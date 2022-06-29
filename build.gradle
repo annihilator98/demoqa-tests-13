@@ -76,7 +76,7 @@ task owner_test(type: Test){
 }
 
 task home_test(type: Test){
-
+    systemProperties(System.getProperties())
     useJUnitPlatform{
         includeTags "home"
     }
