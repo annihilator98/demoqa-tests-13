@@ -3,6 +3,7 @@ package tests;
 import com.codeborne.selenide.Configuration;
 import com.github.javafaker.Faker;
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import pages.PractiseFormPage;
 
@@ -18,6 +19,7 @@ public class PracticeFormTestsWithPageObjects extends TestBase{
     TestData testData = new TestData();
 
     @Test
+    @Tag("home")
     void successfulTest (){
 
         practiseFormPage
