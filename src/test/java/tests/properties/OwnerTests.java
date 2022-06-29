@@ -33,6 +33,10 @@ public class OwnerTests {
         String version = System.getProperty("version", "101");
         String browserSize = System.getProperty("browserSize", "1920x1080");
 
+        System.out.println(browser);
+        System.out.println(version);
+        System.out.println(browserSize);
+
         String login = config.login();
         String password = config.password();
 
