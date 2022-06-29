@@ -29,9 +29,9 @@ public class OwnerTests {
     @Tag("home")
     void propTest(){
 
-        String browser = System.getProperty("browser", "chrome");
-        String version = System.getProperty("version", "101");
-        String browserSize = System.getProperty("browserSize", "1920x1080");
+        String browser = System.getProperty("browser");
+        String version = System.getProperty("version");
+        String browserSize = System.getProperty("browserSize");
 
         System.out.println(browser);
         System.out.println(version);
