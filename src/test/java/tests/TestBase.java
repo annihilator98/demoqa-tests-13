@@ -34,8 +34,9 @@ public class TestBase {
         //Configuration.baseUrl = "https://demoqa.com";
 
         String remoteDriverUrl = System.getProperty("remoteDriverUrl");
-        Configuration.remote = String.format("https://%s:%s@%s", config.login(), config.password(), remoteDriverUrl);
-        System.out.println(remoteDriverUrl);
+        Configuration.remote = "https://" + config.login() + ":" + config.password() + "@" + remoteDriverUrl;
+
+        System.out.println(Configuration.remote = "https://" + config.login() + ":" + config.password() + "@" + remoteDriverUrl);
         System.out.println(config.login());
         System.out.println(config.password());
         //Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wb/hub";
