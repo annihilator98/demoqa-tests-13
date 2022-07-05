@@ -68,7 +68,6 @@ task hello_test(type: Test){
 }
 
 task owner_test(type: Test){
-
     useJUnitPlatform{
         includeTags "owner"
     }
@@ -78,5 +77,12 @@ task home_test(type: Test){
     systemProperties(System.getProperties())
     useJUnitPlatform{
         includeTags "home"
+    }
+}
+
+task simple_test(type: Test){
+    systemProperties(System.getProperties())
+    useJUnitPlatform{
+        includeTags "simple_test"
     }
 }

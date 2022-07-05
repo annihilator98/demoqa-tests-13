@@ -38,10 +38,10 @@ public class PracticeFormTestsWithPageObjects extends TestBase{
                 .setCity(testData.city)
                 .submitForm();
 
-//        practiseFormPage
-//                .checkResult("Student Name", testData.firstName + " " + testData.lastName)
-//                .checkResult("Date of Birth", testData.dateOfBirth)
-//                .checkResult("Student Email", testData.email)
-//                .checkResult("Address", testData.address);
+        practiseFormPage
+                .checkResult("Student Name", testData.firstName + " " + testData.lastName)
+                .checkResult("Date of Birth", testData.dateOfBirth)
+                .checkResult("Student Email", testData.email)
+                .checkResult("Address", testData.address);
     }
 }

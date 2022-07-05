@@ -13,7 +13,6 @@ import org.aeonbits.owner.ConfigFactory;
 
 public class TestBase {
     PractiseFormPage practiseFormPage = new PractiseFormPage();
-
     @BeforeAll
     static void setUp(){
         CredentialsConfig config = ConfigFactory.create(CredentialsConfig.class);

@@ -4,12 +4,14 @@ import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 public class SystemPropertiesTests {
+    @Tag("simple_test")
     @Test
     void someTest1(){
         String browser = System.getProperty("browser");
         System.out.println(browser); //null
     }
 
+    @Tag("simple_test")
     @Test
     void someTest2(){
         System.setProperty("browser", "safari");
@@ -18,12 +20,14 @@ public class SystemPropertiesTests {
         System.out.println(browser);
     }
 
+    @Tag("simple_test")
     @Test
     void someTest3(){
         String browser = System.getProperty("browser", "opera");
         System.out.println(browser); // opera
     }
 
+    @Tag("simple_test")
     @Test
     void someTest4 (){
         System.setProperty("browser", "safari");
@@ -31,6 +35,7 @@ public class SystemPropertiesTests {
         System.out.println(browser); // safari
     }
 
+    @Tag("simple_test")
     @Test
     void someTest5 (){
         System.setProperty("anyValue", "any text");
